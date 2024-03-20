@@ -53,4 +53,77 @@ print(structJames.age)
 
 
 
+//8 TUPLE: Birden fazla değişkeni/veriyi aynı koleksiyon içerisinde kullanmamızı sağlıyor. Böyle söyleyince kulağa dizi gibi gelebilir. İkili üçlü verileri tutmakta kullanılır, mesela enlem-boylam veya piksel(1250x2200) veya xyz kordinatı. Alakadar birşeyleri göstermek için kullanılır
+let myTupple = (1,2)
+myTupple.0
+let myTupple2 = (3 , [12,54,80], 4)
+myTupple2.1[0]
+
+//.8 alacağı variable türlerini de önceden belirleyebiliriz(pre-defined)
+let predefinedTupple : (String, Bool)
+
+//..8 Bu içerideki variablelara isim de verebiliriz:
+let namedTupple = (name:"Eray" , age:"22")
+
+
+
+
+
+
+//9 Guard Let vs If Let: Hemen hemen ikisi de aynı şeyler ama Guard'da gerçekten bir şeyi koruma güdüsü var, daha negatif. If Let daha pozitif
+let myString = "5"
+
+func convertToIntegerGuard(stringInput:String) -> Int{  // Guardı kendimize daha çok güvendiğimiz yerlerde kullanırız
+    guard let myInteger = Int(stringInput) else {   // Burada sayıyı integer'a çevirmesi kesindir hatta bu yüzden aşağıda return bile edebiliriz ki olurda çeviremezsen 0 çevir
+        return 0
+    }
+    return myInteger
+}
+
+
+func convertToIntegerIf(stringInput:String) -> Int{
+    if let myInteger = Int(stringInput){
+        return myInteger
+    }else{
+        return 0
+    }
+    
+}
+
+
+
+
+
+
+//Switch Case
+
+let myNum = 11
+let myRemainder = myNum%3
+switch myRemainder{
+case 1...3:     // 1 ile 3 arasındaysa bunu yazdırır
+    print("It's 1-3")
+case 4:
+    print("It's 4")
+case 5:
+    print("It's 5")
+default:
+    print("None of them")
+}
+
+
+
+
+
+
+//Breakpoint: // Kodu istediğimiz yerden çalıştırmaya yarar, satır numarası üzerine tıklayarak ekleyip, basılı tutup sürükleyip çıkartabiliriz
+var x = 5
+print(x)
+x += 1
+print(x)
+
+
+
+
+
+
 
